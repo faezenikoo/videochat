@@ -1,0 +1,208 @@
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    padding: 0px 20px;
+    background: #38e6c6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 9px 4px #e2e2e2;
+}
+.logo-btn{
+    padding: 20px 10px;
+    font-weight: bold;
+    color: black;
+    width: 100px;
+    text-align: center;
+    transition: all 0.5s linear;
+    background: #ecaf02;
+    border-radius: 0px;
+    transform: skew(10deg, 0deg);
+}
+.logo-btn:hover{
+    background: #a2f5daa1;
+    font-size: 14.1px;
+}
+.content {
+    text-align: center;
+    margin-top: 100px;
+}
+.content .title{
+    color: #aba8a8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+#roomName{
+    border: 1px solid #b7b4b4;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    color: #908f8f;
+    font-weight: 600;
+    background: white !important;
+}
+#roomName:focus,#roomName:active{
+    background: white !important;
+    border: 1px solid #ecaf02;
+    outline: none !important;
+}
+input[type="submit"]{
+    background: #ecaf02;
+    border: 1px solid #ecaf02;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+    color: #1d1c1c;
+    font-weight: bold;
+    margin-left: 1px;
+    transition: all 0.5s ease;
+}
+input[type="submit"]:hover{
+    border: 1px solid #EC9309;
+}
+.rooms-box{
+    background: #edfdf7;
+    padding-bottom: 15px ;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.rooms-box-title{
+    padding: 10px;
+    background: #daf9ce;
+    border-radius: 3px 3px 0px 0px;
+    color: #3a3939;
+    font-weight: bold;
+    font-size: 19px;
+}
+.room{
+    margin-bottom:10px;
+    font-weight: bold;
+}
+.room-title{
+    margin-right: 15px;
+    color: #6f6868;
+    font-size: 17px;
+}
+.room-btn{
+    display: inline-block;
+    font-size: 14px;
+    color: #23527c;
+}
+.video-btn{
+    margin-right: 10px;
+}
+.video-btn:hover{
+    color: #b97106;
+}
+.voice-btn:hover{
+    color: #800059;
+}
+
+
+
+
+#media-div{
+    margin-top: 50px;
+}
+#media-div .voice-ic{
+    display: inline-block;
+    background: #f39fe5;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 22px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+/* video chat */
+.video-title{
+    color: #b97106 !important;
+    font-family: sans-serif;
+}
+#media-div .video-box{
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+#media-div .video-box video{
+    border: 3px solid #b97106;
+    border-radius: 6px;
+}
+#media-div .video-box-title{
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+/* voice chat */
+.voice-title{
+    color: #800059 !important;
+    font-family: sans-serif;
+}
+#media-div .voice-box{
+    display: inline-block;
+    margin-left: 50px;
+    padding: 20px;
+    border: 1px solid #f39fe5;
+    border-radius: 50%;
+    width: 80px;
+    height:80px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#media-div .voice-box-title{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/********************** anim *******************************************/
+@keyframes ripl{
+
+    100%{
+        top:-12px;
+        bottom:-12px;
+        left:-12px;
+        right:-12px;
+        opacity:0;
+    }
+}
+.ripleout{
+   position: relative;
+}
+
+.ripleout:before{
+    content:" ";
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    border: #f39fe5 solid 3px;
+    border-radius: 50%;
+    animation-name:ripl;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+}
+.ripleout:hover:before{
+    animation-name:ripl;
+    animation-duration:1s;
+    animation-iteration-count:1s;
+}
